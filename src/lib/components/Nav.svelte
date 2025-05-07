@@ -2,6 +2,4 @@
   import Nav from "$lib/components/Nav.svelte";
 </script>
 
-<Nav />
-
-<h1>Leiden sportzomer</h1>
+<h1>test</h1>
