@@ -2,7 +2,7 @@ export async function load() {
   try {
     const [verenigingenRes, activiteitenRes] = await Promise.all([
       fetch('https://fdnd-agency.directus.app/items/leidensportzomer_verenigingen'),
-      fetch('https://fdnd-agency.directus.app/items/leidensportzomer_activiteiten')
+      fetch('https://fdnd-agency.directus.app/items/leidensportzomer_activiteiten?limit=4')
     ]);
 
     if (!verenigingenRes.ok || !activiteitenRes.ok) throw new Error('Fout bij ophalen');
@@ -21,9 +21,6 @@ export async function load() {
       activiteiten: []
     };
   }
-
-
-  
 }
 
 
