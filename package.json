@@ -15,5 +15,9 @@
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
 		"svelte": "^5.0.0",
 		"vite": "^6.2.5"
+	},
+	"dependencies": {
+		"22": "^0.0.0",
+		"@directus/sdk": "^19.1.0"
 	}
 }
