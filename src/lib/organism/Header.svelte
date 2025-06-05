@@ -1,22 +1,18 @@
 <script>
-  let menuToggle;
-
-  function closeMenu() {
-    if (menuToggle) menuToggle.checked = false;
-  }
+  let menuOpen = false;
 </script>
 
 <nav class="navbar">
-  <p class="stacked">
+  <p class="logo">
     <span>leiden</span>
     <span>sport</span>
     <span>zomer</span>
   </p>
 
-  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden />
   <label for="menu-toggle" class="hamburger">☰</label>
 
-  <ul class="nav-links">
+  <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/activiteiten">Activiteiten</a></li>
     <li><a href="/verenigingen">Verenigingen</a></li>
@@ -24,19 +20,22 @@
 </nav>
 
 <style>
+  .logo span {
+    font-family: var(--heading-font);
+    display: block;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--primary-color-1);
+    font-weight: 800;
+  }
+
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 1em;
+    padding: 0.5em;
     flex-wrap: wrap;
-  }
-
-  .stacked span {
-    display: block;
-    text-transform: uppercase;
-    font-weight: bolder;
-    color: red;
+    position: relative;
   }
 
   .menu-toggle {
@@ -44,29 +43,33 @@
   }
 
   .hamburger {
-    font-size: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
-    margin: 1em 0;
+    margin: 0.5em 0;
     user-select: none;
   }
 
-  .nav-links {
+  ul {
     display: none;
     flex-direction: column;
-    background: black;
+    background: var(--primary-color-2);
     padding: 1em;
     border-radius: 15px;
-    width: 100%;
     gap: 1rem;
-    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
   }
 
-  .menu-toggle:checked + .hamburger + .nav-links {
+  .menu-toggle:checked + .hamburger + ul {
     display: flex;
   }
 
   li {
     list-style: none;
+    border-bottom: 1px solid var(--white);
   }
 
   li:hover a,
@@ -75,7 +78,7 @@
   }
 
   a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
   }
 
@@ -90,16 +93,13 @@
       display: none;
     }
 
-    .nav-links {
-      display: flex !important;
+    ul {
+      display: flex;
       flex-direction: row;
       justify-content: space-around;
       width: 75%;
       margin-left: 2em;
-    }
-
-    .menu-toggle {
-      display: none;
+      position: unset;
     }
   }
 </style>
