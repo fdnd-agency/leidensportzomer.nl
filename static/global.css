@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Inter Medium";
+  src: url("/fonts/Inter_24pt-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url("/fonts/Inter_24pt-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inter Black";
+  src: url("/fonts/Inter_28pt-Black.ttf");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url("/fonts/Inter_28pt-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inter Extra Bold";
+  src: url("/fonts/Inter_28pt-ExtraBold.ttf");
+}
+
+:root {
+  --regular-font: "Inter Medium", sans-serif;
+  --button-font: "Inter Bold", sans-serif;
+  --heading-font: "Inter Extra Bold", sans-serif;
+  --title-font: "Inter Black", sans-serif;
+
+  --primary-color-1: #e31441;
+  --primary-color-2: #000000;
+  --accent-color-1: #c7cbc8;
+  --accent-color-2: #f4f4f4;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
