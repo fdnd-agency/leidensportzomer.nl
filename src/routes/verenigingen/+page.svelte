@@ -3,7 +3,7 @@
   const { verenigingen } = data;
 </script>
 
-<h1>Activiteiten</h1>
+<h1>Verenigingen</h1>
 
 {#each verenigingen as vereniging}
   <article>
