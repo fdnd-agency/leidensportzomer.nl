@@ -4,6 +4,19 @@
   import { Card } from "$lib/index.js";
 </script>
 
-<h1>Activiteiten</h1>
+<section>
+  <h1>Activiteiten</h1>
+  <Card {data} />
+</section>
 
-<Card {data} />
+<style>
+  h1 {
+    font-size: 40px;
+    padding: 0.7em;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>

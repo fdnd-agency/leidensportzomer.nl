@@ -15,10 +15,11 @@
     />
     <div class="article-text">
       <h3>{activiteit.titel}</h3>
-      <p class="date">{activiteit.datum}</p>
-      <p>{activiteit.tijd}</p>
-      <Location />
-      <p>{activiteit.locatie}</p>
+      <p class="date">{activiteit.datum} {activiteit.tijd}</p>
+      <div class="article-location">
+        <Location />
+        <p class="location">{activiteit.locatie}</p>
+      </div>
     </div>
   </article>
 {/each}
@@ -26,21 +27,31 @@
 <style>
   article {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
-    background-color: var(--accent-color-1);
+    background-color: #eeeeee;
     border: 1px solid #ddd;
     border-radius: 1rem;
     margin: 1em 1em;
     padding: 1em;
-    max-width: 500px;
+    width: 280px;
+    @media (min-width: 27rem) {
+      flex-direction: row;
+      width: 500px;
+    }
   }
 
   .article-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 0.3rem;
+    @media (min-width: 27rem) {
+      align-items: start;
+      width: 500px;
+    }
   }
 
   article img {
@@ -49,11 +60,19 @@
     border-radius: 0.5rem;
   }
 
+  .article-location {
+    display: flex;
+  }
+
+  .location {
+    /* padding-bottom: 0.5em; */
+    padding-left: 0.5em;
+  }
+
   .date {
     background-color: var(--primary-color-1);
     color: var(--white);
     font-family: var(--button-font);
-    /* font-size: 16px; */
     text-align: center;
     width: 70%;
     padding: 0.2em;
