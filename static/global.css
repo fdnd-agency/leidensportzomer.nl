@@ -31,13 +31,16 @@
 
   --primary-color-1: #e31441;
   --primary-color-2: #000000;
+  --primary-color-3: #d62410;
   --accent-color-1: #c7cbc8;
   --accent-color-2: #f4f4f4;
+  --accent-color-3: #eeeeee;
   --white: #ffffff;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 

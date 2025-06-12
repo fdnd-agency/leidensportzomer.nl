@@ -1,15 +1,22 @@
 <script>
   export let data;
   const { activiteiten } = data;
+  import { Card } from "$lib/index.js";
 </script>
 
-<h1>Activiteiten</h1>
+<section>
+  <h1>Activiteiten</h1>
+  <Card {data} />
+</section>
 
-{#each activiteiten as activiteit}
-  <article>
-    <h3>{activiteit.titel}</h3>
-    <p>{activiteit.locatie}</p>
-    <p>{activiteit.datum}</p>
-    <p>{activiteit.tijd}</p>
-  </article>
-{/each}
+<style>
+  h1 {
+    font-size: 40px;
+    padding: 0.7em;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>

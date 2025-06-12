@@ -36,6 +36,7 @@
     padding: 0.5em;
     flex-wrap: wrap;
     position: relative;
+    margin: 1em;
   }
 
   .menu-toggle {
