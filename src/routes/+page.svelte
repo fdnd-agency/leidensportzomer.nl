@@ -1,11 +1,11 @@
 <script>
   export let data;
-
+  import { Hero, About, HowItWorks } from "$lib/index.js";
   const { verenigingen, activiteiten } = data;
 </script>
 
-<h1>Leiden sportzomer</h1>
-
+<Hero />
+<About />
 <section>
   <h2>Aankomende activiteiten</h2>
   <div class="article-carousel">
@@ -14,24 +14,28 @@
         <img
           src="./assets/testfoto.png"
           alt="Voetballers"
-          width="120"
-          height="120"
+          width="150"
+          height="150"
         />
         <h3>{activiteit.titel}</h3>
         <p class="date">{activiteit.datum} {activiteit.tijd}</p>
-        <!-- <p>{activiteit.tijd}</p> -->
       </article>
     {/each}
   </div>
 </section>
 
+<HowItWorks />
+
 <style>
   section {
-    margin-top: 1em;
+    /* margin-top: 1em; */
+    margin: 4em 0;
   }
 
   h2 {
-    padding-left: 1em;
+    /* padding-left: 1em; */
+    padding: 0 0 2em 1em;
+    text-align: center;
   }
   article {
     display: flex;
@@ -46,6 +50,10 @@
     padding: 1em;
     width: 230px;
     height: 300px;
+  }
+
+  img {
+    border: 1rem;
   }
 
   .article-carousel {

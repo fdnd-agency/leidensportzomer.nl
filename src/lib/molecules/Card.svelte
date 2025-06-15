@@ -6,22 +6,24 @@
 </script>
 
 {#each activiteiten as activiteit}
-  <article>
-    <img
-      src="./assets/testfoto.png"
-      alt="Voetballers"
-      width="120"
-      height="120"
-    />
-    <div class="article-text">
-      <h3>{activiteit.titel}</h3>
-      <p class="date">{activiteit.datum} {activiteit.tijd}</p>
-      <div class="article-location">
-        <Location />
-        <p class="location">{activiteit.locatie}</p>
+  <a href={`/activiteiten/${activiteit.slug}`} class="activiteit-link">
+    <article>
+      <img
+        src="./assets/testfoto.png"
+        alt="Voetballers"
+        width="120"
+        height="120"
+      />
+      <div class="article-text">
+        <h3>{activiteit.titel}</h3>
+        <p class="date">{activiteit.datum} {activiteit.tijd}</p>
+        <div class="article-location">
+          <Location />
+          <p class="location">{activiteit.locatie}</p>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+  </a>
 {/each}
 
 <style>
@@ -77,5 +79,11 @@
     width: 70%;
     padding: 0.2em;
     border-radius: 6px;
+  }
+
+  .activiteit-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
   }
 </style>
