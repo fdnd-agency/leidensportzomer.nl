@@ -4,8 +4,8 @@
   import { Card } from "$lib/index.js";
 </script>
 
+<h1>Activiteiten</h1>
 <section>
-  <h1>Activiteiten</h1>
   <Card {data} />
 </section>
 
